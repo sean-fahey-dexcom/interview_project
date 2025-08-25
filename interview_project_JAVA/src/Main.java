@@ -24,16 +24,5 @@ public class Main {
         String showUsernameLocatorType = "ID";
         String showUsernameLocatorValue = "show_username_element";
 
-        List<String> devices = Utils.getConnectedDevices();
-        for (String device : devices) {
-            AndroidConnector connector = new AndroidConnector(device);
-            connector.clickElement(profileLocatorType, profileLocatorValue);
-            boolean isAppVersionPresent = connector.checkElementPresence(appVersionLocatorType, appVersionLocatorValue);
-            String appVersion = null;
-            if (isAppVersionPresent) {
-                appVersion = connector.getTextFromAppVersionElement(appVersionLocatorType, appVersionLocatorValue);
-            }
-            System.out.printf("Device: %s, App Version: %s\n", device, appVersion);
-        }
     }
 }

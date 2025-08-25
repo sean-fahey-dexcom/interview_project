@@ -31,16 +31,6 @@ def main():
     show_username_locator_type = AppiumBy.ID
     show_username_locator_value = "show_username_element"
 
-    devices = get_connected_devices()
-    for device in devices:
-        connector = AndroidConnector(device)
-        connector.click_element(profile_locator_type, profile_locator_value)
-        is_app_version_present = connector.check_element_presence(app_version_locator_type, app_version_locator_value)
-        app_version = None
-        if is_app_version_present:
-            app_version = connector.get_text_from_app_version_element(app_version_locator_type, app_version_locator_value)
-        print(f"Device: {device}, App Version: {app_version}")
-
 
 if __name__ == "__main__":
     main()
