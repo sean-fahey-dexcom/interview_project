@@ -7,19 +7,23 @@ package src;
 public class AndroidConnector {
     private String deviceDsn;
 
+    // Constructor
     public AndroidConnector(String deviceDsn) {
         this.deviceDsn = deviceDsn;
     }
 
+    // Click on an element
     public void clickElement(String locatorType, String locatorValue) {
         System.out.printf("\tSuccessfully clicked on element with locatorType: %s and value: %s\n", locatorType, locatorValue);
     }
 
+    // Check if an element is present
     public boolean checkElementPresence(String locatorType, String locatorValue) {
         System.out.printf("\tFound an element with locatorType: %s and value: %s\n", locatorType, locatorValue);
         return true;
     }
 
+    // Get text from the app version element
     public String getTextFromAppVersionElement(String locatorType, String locatorValue) {
         System.out.printf("\tExtracting app version text from element with locatorType: %s and value: %s\n", locatorType, locatorValue);
         if ("ID".equals(locatorType) && "app_version_element_id".equals(locatorValue)) {

@@ -1,6 +1,8 @@
 package src;
 
-import java.util.List;
+import java.io.*;
+import java.util.*;
+
 
 /**
  * This is the entry point for the project. Edit the `main` method to implement the following:
@@ -24,5 +26,6 @@ public class Main {
         String showUsernameLocatorType = "ID";
         String showUsernameLocatorValue = "show_username_element";
 
+        System.out.println("Hello World!");
     }
 }

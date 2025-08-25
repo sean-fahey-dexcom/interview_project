@@ -17,7 +17,6 @@ the following:
 
 from appium.webdriver.common.appiumby import AppiumBy
 
-from android_connector import AndroidConnector
 from utils import get_connected_devices
 
 
@@ -30,6 +29,8 @@ def main():
 
     show_username_locator_type = AppiumBy.ID
     show_username_locator_value = "show_username_element"
+
+    print("Hello World!")
 
 
 if __name__ == "__main__":
