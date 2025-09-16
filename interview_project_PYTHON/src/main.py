@@ -18,6 +18,7 @@ the following:
 from appium.webdriver.common.appiumby import AppiumBy
 
 from utils import get_connected_devices
+from android_connector import AndroidConnector
 
 
 def main():
@@ -27,10 +28,17 @@ def main():
     app_version_locator_type = AppiumBy.ID
     app_version_locator_value = "app_version_element_id"
 
-    show_username_locator_type = AppiumBy.ID
-    show_username_locator_value = "show_username_element"
+    devices = get_connected_devices()
+    for device in devices:
+        conn = AndroidConnector(device)
+        conn.click_element(profile_locator_type, profile_locator_value)
 
-    print("Hello World!")
+        if conn.check_element_presence(app_version_locator_type, app_version_locator_value):
+            app_version = conn.get_text_from_app_version_element(app_version_locator_type, app_version_locator_value)
+            print(f"Device {device} has app version: {app_version}")
+
+        else:
+            print(f"Device {device} has app version: None")
 
 
 if __name__ == "__main__":

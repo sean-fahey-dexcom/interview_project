@@ -10,25 +10,30 @@ import java.util.*;
  * 1) Get the list of connected Android devices.
  * 
  * 2) For each device do the following:
- *    2a) Find and click the `PROFILE` button.
- *    2b) Check if the `APP_VERSION` button is present.
- *      2b.1) If the `APP_VERSION` button is present, get the text value of the element.
- *      2b.2) If the `APP_VERSION` button is not present, get the value `null`.
- * 
- * 3) Print the app version or null for each device.
+ *    a) Create an `AndroidConnector` instance.
+ *    b) Check if the `APP_VERSION` button is present.
+ *    c) If the `APP_VERSION` button is present, print the text value of the element.
+ *    d) If the `APP_VERSION` button is NOT present, print the value `null`.
+ *
  */
 public class Main {
     public static void main(String[] args) {
-        String profileLocatorType = "XPATH";
-        String profileLocatorValue = "//button[text()='PROFILE']";
-
         String appVersionLocatorType = "ID";
         String appVersionLocatorValue = "app_version_element_id";
 
-        String showUsernameLocatorType = "ID";
-        String showUsernameLocatorValue = "show_username_element";
+        List<String> devices = Utils.getConnectedDevices();
+        for (int i = 0; i < devices.size(); i++) {
+            String deviceDsn = devices.get(i);
+            System.out.println("Processing device: " + deviceDsn);
+            AndroidConnector connector = new AndroidConnector(deviceDsn);
 
-        System.out.println("Hello World!");
-        System.out.println(profileLocatorType + '\t' + profileLocatorValue);
+            boolean isPresent = connector.checkElementPresence(appVersionLocatorType, appVersionLocatorValue);
+            if (isPresent) {
+                String appVersion = connector.getTextFromAppVersionElement(appVersionLocatorType, appVersionLocatorValue);
+                System.out.println("App version for device " + deviceDsn + ": " + appVersion);
+            } else {
+                System.out.println("App version for device " + deviceDsn + ": null");
+            }
+        }
     }
 }
