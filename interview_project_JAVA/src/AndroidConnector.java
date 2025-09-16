@@ -12,11 +12,6 @@ public class AndroidConnector {
         this.deviceDsn = deviceDsn;
     }
 
-    // Click on an element
-    public void clickElement(String locatorType, String locatorValue) {
-        System.out.printf("\tSuccessfully clicked on element with locatorType: %s and value: %s\n", locatorType, locatorValue);
-    }
-
     // Check if an element is present
     public boolean checkElementPresence(String locatorType, String locatorValue) {
         System.out.printf("\tFound an element with locatorType: %s and value: %s\n", locatorType, locatorValue);

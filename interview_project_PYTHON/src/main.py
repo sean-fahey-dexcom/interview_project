@@ -31,6 +31,7 @@ def main():
     show_username_locator_value = "show_username_element"
 
     print("Hello World!")
+    print(profile_locator_type, profile_locator_value)
 
 
 if __name__ == "__main__":
