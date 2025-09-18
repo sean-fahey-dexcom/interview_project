@@ -27,9 +27,11 @@ public class Main {
         System.out.println("Random numbers: " + Arrays.toString(numbers));
 
         // Step 2 & 3 - your code here
-
-
-
+        for (int number : numbers) {
+            if (number % 2 != 0) {
+                oddCount++;
+            }
+        }
 
         return oddCount;
     }
@@ -60,14 +62,15 @@ public class Main {
 
         for (char character : randomString.toCharArray()) {
             // add the character to the map or update its count
-
-
+            frequencyMap.put(character, frequencyMap.getOrDefault(character, 0) + 1);
         }
 
         for (Map.Entry<Character, Integer> item : frequencyMap.entrySet()) {
             // Find the highest frequency and corresponding character
-
-
+            if (item.getValue() > maxFrequency) {
+                maxFrequency = item.getValue();
+                mostFrequentChar = item.getKey();
+            }
         }
 
         return mostFrequentChar + ": " + maxFrequency;

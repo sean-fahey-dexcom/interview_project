@@ -33,17 +33,13 @@ def main():
         conn = AndroidConnector(device)
         conn.click_element(profile_locator_type, profile_locator_value)
 
-<<<<<<< HEAD:interview_project_PYTHON/src/main.py
         if conn.check_element_presence(app_version_locator_type, app_version_locator_value):
             app_version = conn.get_text_from_app_version_element(app_version_locator_type, app_version_locator_value)
             print(f"Device {device} has app version: {app_version}")
 
         else:
             print(f"Device {device} has app version: None")
-=======
-    print("Hello World!")
-    print(profile_locator_type, profile_locator_value)
->>>>>>> collaboration:Python_project_1/src/main.py
+        print()
 
 
 if __name__ == "__main__":

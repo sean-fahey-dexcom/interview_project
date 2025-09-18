@@ -27,7 +27,6 @@ public class Main {
             System.out.println("Processing device: " + deviceDsn);
             AndroidConnector connector = new AndroidConnector(deviceDsn);
 
-<<<<<<< HEAD:interview_project_JAVA/src/Main.java
             boolean isPresent = connector.checkElementPresence(appVersionLocatorType, appVersionLocatorValue);
             if (isPresent) {
                 String appVersion = connector.getTextFromAppVersionElement(appVersionLocatorType, appVersionLocatorValue);
@@ -35,10 +34,7 @@ public class Main {
             } else {
                 System.out.println("App version for device " + deviceDsn + ": null");
             }
+            System.out.println();
         }
-=======
-        System.out.println("Hello World!");
-        System.out.println(appVersionLocatorType + '\t' + appVersionLocatorValue);
->>>>>>> collaboration:Java_project_1/src/Main.java
     }
 }
