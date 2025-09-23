@@ -19,6 +19,8 @@
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "java -version",
+
+	// Customize container specific settings.json values on container create.
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -37,11 +39,14 @@
 
 				// Live Share
 				"ms-vsliveshare.vsliveshare"
-			]
+			],
+			"settings": {
+				"liveshare.guestApprovalRequired": false,
+				"liveshare.access": "write",
+				"liveshare.guestConsoleAccess": "run"
+			}
 		}
 	}
-	// Configure tool-specific properties.
-	// "customizations": {},
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
