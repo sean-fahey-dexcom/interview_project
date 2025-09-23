@@ -73,6 +73,7 @@ public class Main {
         return mostFrequentChar + ": " + maxFrequency;
     }
 
+    //  Helper classes - do not modify
     static class RandomNumberGenerator {
         // Generates an array of random integers
         private Random random = new Random();
