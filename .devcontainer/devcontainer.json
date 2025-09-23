@@ -18,7 +18,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "java -version",
+	"postCreateCommand": "python -m venv .venv && source .venv/bin/activate && pip install -U pip && pip install uv && uv pip install -r Python_project_1/requirements.txt && deactivate",
 
 	// Customize container specific settings.json values on container create.
 	"customizations": {
