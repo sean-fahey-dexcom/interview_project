@@ -10,7 +10,7 @@ public class Main {
 
         Generators.RandomPassword rpg = new Generators.RandomPassword();
         String password = rpg.generateRandomPassword();
-        System.out.println("Question 2 - Is the password '" + password + "' valid?): " + question2(password));
+        System.out.println("Question 2 - Is the password '" + password + "' valid?: " + question2(password));
         System.out.println();
 
         Integer temperature = new Random().nextInt(60) - 10;
@@ -109,7 +109,7 @@ public class Main {
         }
         isLongEnough = password.length() >= 8;
 
-        // example using traditional for loop
+        // example using traditional for loop (pre Java 5)
         // for (int i = 0; i < password.length(); i++) {
         //     char character = password.charAt(i);
         //     if (Character.isLowerCase(character)) {
@@ -123,6 +123,10 @@ public class Main {
         // isLongEnough = password.length() >= 8;
 
         // example not using loops (bonus points for creativity!)
+        // This approach demonstrates strong logical reasoning and deeper
+        // knowledge of string properties. A candidate giving this answer is
+        // very proficient in Java.
+
         // hasLowercase = !password.equals(password.toUpperCase());
         // hasUppercase = !password.equals(password.toLowerCase());
         // hasNumber = password.chars().anyMatch(Character::isDigit);
@@ -165,9 +169,6 @@ public class Main {
 
         // example using switch expression (bonus points for creativity! even if a bit messy)
         // switch (temperature) {
-        //     case 0: case 1: case 2: case 3: case 4: case 5: case 6: case 7: case 8: case 9: case 10: case 11: case 12: case 13: case 14:
-        //     condition = "Cold";
-        //     break;
         //     case 15: case 16: case 17: case 18: case 19: case 20: case 21: case 22: case 23: case 24: case 25:
         //     condition = "Good";
         //     break;
@@ -175,7 +176,7 @@ public class Main {
         //     condition = "Hot";
         //     break;
         //     default:
-        //     if (temperature < 0) {
+        //     if (temperature < 15) {
         //         condition = "Cold";
         //     } else {
         //         condition = "🥵";
