@@ -36,8 +36,8 @@ def question_1():
     odd_count = len([num for num in random_array if num % 2 != 0])
 
     # Option 4: filter and len  <- Bonus! AI will NEVER suggest this approach
-    def is_odd(x):
-        return x % 2 != 0
+    def is_odd(number):
+        return number % 2 != 0
     odd_count = len(list(filter(is_odd, random_array)))
 
 
@@ -107,6 +107,7 @@ def question_2():
 
 
     # Option 5: collections.Counter <- Bonus! This person is an expert at Python
+    # Watch out for simple mistakes here. AI will often suggest using Counter if prompted correctly.
     from collections import Counter
     frequency = Counter(random_string)
     most_frequent_char, max_frequency = frequency.most_common(1)[0]
