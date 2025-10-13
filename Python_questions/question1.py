@@ -5,7 +5,7 @@ def question1():
     """"
     Goal: Count how many ODD numbers are in a randomly generated array
     of integers.
-    
+
     Steps:
         1. Loop through the array and check each number one at a time.
         2. If the number is odd, add 1 to the odd_count variable.
@@ -20,7 +20,7 @@ def question1():
     for num in numbers:
         if is_odd(num):
             odd_count += 1
-    
+
     # Option 2: loop the indices. Some people take this approach when they're less familiar with Python syntax
     for i in range(len(numbers)):
         if is_odd(numbers[i]):

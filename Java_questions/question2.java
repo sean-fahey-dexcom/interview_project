@@ -62,7 +62,7 @@ public class question2 {
         hasUppercase = !password.equals(password.toLowerCase());
         hasNumber = password.matches(".*[0-9].*");
 
-        
+
         // Option 5: Using streams (advanced)
         hasUppercase = password.chars().anyMatch(c -> Character.isUpperCase(c));
         hasNumber = password.chars().anyMatch(c -> Character.isDigit(c));

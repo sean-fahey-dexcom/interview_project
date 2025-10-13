@@ -6,7 +6,7 @@ def question4():
     Goal: Given a random string, determine if it is a palindrome. A 
     palindrome is a word that reads the same backward as forward like
     "racecar" or "level".
-    
+
     Steps:
         1. Loop through the string and compare the first character to the
            last character.
@@ -41,13 +41,13 @@ def question4():
     reversed_word = word[::-1]
     if word != reversed_word:
         is_palindrome = False
-    
+
     # Option 4: Using the reversed() function and join()
     word_as_list = list(word)
     reversed_word_as_list = list(reversed(word_as_list))
     if word_as_list != reversed_word_as_list:
         is_palindrome = False
-    
+
     # Option 5: Direct assignment. By far the best approach. Also very unique to python.
     is_palindrome = word == word[::-1]
 

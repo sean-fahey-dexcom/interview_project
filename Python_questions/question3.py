@@ -9,10 +9,10 @@ def question3():
         2. If the temperature is below 15, the condition is `Cold`
         3. If the temperature is between 16 and 25 (inclusive), the condition is `Good`
         4. If the temperature is above 25, the condition is `Hot`
-    
+
         Fun bonus points:
             5. If the temperature is above 40, the condition is `🥵`
-            
+
     """
 
     current_temperature = random_temperature(-10, 50)
@@ -27,7 +27,7 @@ def question3():
         condition = "Hot"
     else:  # current_temperature > 40
         condition = "🥵"
-    
+
 
     # Option 2: nested if-else statements. Not as pretty, but still works.
     if current_temperature < 15:
@@ -40,7 +40,7 @@ def question3():
                 condition = "Hot"
             else:  # current_temperature > 40
                 condition = "🥵"
-    
+
 
     # Option 3: in-line if-else statements. More advanced.
     condition = (

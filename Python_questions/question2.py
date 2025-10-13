@@ -53,7 +53,7 @@ def question2():
     has_uppercase = bool(re.search(r'[A-Z]', password))
     has_number = bool(re.search(r'\d', password))
 
-    
+
     # Options for is_long_enough:
     # Option 1: simple condition
     if len(password) >= 8:

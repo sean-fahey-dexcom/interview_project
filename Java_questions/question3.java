@@ -10,7 +10,7 @@ public class question3 {
         //   2. If the temperature is below 15, the condition is `Cold`
         //   3. If the temperature is between 16 and 25 (inclusive), the condition is `Good`
         //   4. If the temperature is above 25, the condition is `Hot`
-        
+
         //   Fun bonus points:
         //      5. If the temperature is above 40, the condition is `🥵`
 

@@ -7,12 +7,12 @@ def question5():
     Goal: You are given a random string of length 10 containing ONLY the
     letters a, b, c, d, and e. Find which letter appears the most AND
     how many times it appears.
-    
+
     Steps:
         1. Loop through the string and count how many times each letter appears.
         2. Save the letter that appears to the variable `mostFrequentChar`.
         3. Save the number of times it appears to the variable `maxFrequency`.
-    
+
     """
 
     random_str = random_string(10)
@@ -38,7 +38,7 @@ def question5():
             frequency[char] = 0
         else:
             frequency[char] += 1
-    
+
     for key, value in frequency.items():
         if value > max_frequency:
             max_frequency = value
@@ -48,10 +48,10 @@ def question5():
     # Option 3: dictionary with 3 loops
     for char in random_str:
         frequency[char] = 0
-    
+
     for char in random_str:
         frequency[char] += 1
-    
+
     for key, value in frequency.items():
         if value > max_frequency:
             max_frequency = value
