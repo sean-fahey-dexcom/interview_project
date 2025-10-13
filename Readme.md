@@ -11,33 +11,48 @@ There is a `solution` branch with examples, and a `collaboration` branch with
 just the instructions and provided code. Checkout whichever is appropriate in
 order to see the test questions.
 
-### Java Project 1
+### Java Problems
 
-This is for intermediate level candidates (L3 testers, some L2 testers). It
-tests their ability to work in a somewhat realistic codebase without being
-too information dense, and to read and interpret instructions. The logic is
-actually pretty light.
+This directory contains 5 questions to test the candidate's familarity with some
+basic Java functionality. For L1 & L2 testers, we're not looking for perfect,
+or even working, code. We simply want the candidate to demonstrate that they're
+familiar with the basics of the language. L3 testers should produce working
+code to answer all questions and should be able to clearly explain their
+approach.
 
-### Java Project 2
+Ideally the candidate should demonstrate:
 
-This is for junior level candidates (L1, some L2 testers). It tests their
-familiarity with some basic data types in Java. Level 1 testers can answer in
-pseudo-code if they get tripped up in the logic. There are multiple examples
-of how to approach the problems in the `solution` branch, including some unique
-approaches that would indicate someone has exceptional experience with Java.
+- Using for loops correctly
+- Using and understanding conditional if statements
+- Using a variety of Java data types
 
-### Python Project 1
+### Python Problems
 
-This is a mirror of `Java Project 1` written in Python. Testers that claim to
-have familarity with Python should be able to handle relative imports and OOP
-concepts.
+This directory contains 5 questions to test familarity with Python. If we are
+testing the candidate on Python skills instead of Java skills, they should be
+able to demonstrate at least an intermediate skill level. Their code should
+work correctly, and they should be able to explain in detail what each step
+does. We should not consider candidates above the L2 level on python skills
+alone.
 
-### Python Project 2
+Ideally the candidate should demonstrate:
 
-This is similar to `Java Project 2`. It's best for L1 and some L2 testers with
-python experience. It looks for familarity with basic python data types. There
-are a few examples in the `solution` branch, including unique approaches that
-would indicate someone has exceptional experience with python.
+- Correctly using for loops.
+- Correctly implimenting if, elif, and else statements.
+- Selecting the most appropriate data type for each given problem.
+- Understanding relative imports.
+- Calling functions and understanding what is returned from a function.
+
+### Questions
+
+The questions are the same in the Python and Java directories.
+
+
+1. Count how many odd numbers are in an array [`Easy`]
+2. Check if password is valid [`Easy`]
+3. Weather conditions. Determine which range an integer falls in to. [`Easy`]
+4. Identify if a word is a palandrome [`Medium`]
+5. Identify most frequent letter in a word and the number of times it occurs [`Hard`]
 
 ```email
 Author: Sean Fahey
