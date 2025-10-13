@@ -18,7 +18,7 @@ def question4():
     """
 
     word = random_word_picker()
-    is_palindrome = False
+    is_palindrome = True
 
     # Your code here ↓↓↓↓
 
