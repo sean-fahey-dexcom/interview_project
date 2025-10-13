@@ -1,4 +1,4 @@
-package Java_tests;
+package Java_questions;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -11,17 +11,19 @@ public class question1 {
         // of integers.
         //
         // Steps:
-        //   1. Loop through the array and check each number one at a time. If
-        //      the number is odd, add 1 to the oddCount variable.
+        //   1. Loop through the array and check each number one at a time.
+        //   2. If the number is odd, add 1 to the oddCount variable.
+
         int[] numbers = numberGenerator(10, 1, 100);
         int oddCount = 0;
 
-        // your code here ----
+        // Your code here ↓↓↓↓
 
 
 
 
-        // Print the result
+        // ↑↑↑↑ Your code goes above
+
         System.out.println("Question 1 - Odd Count");
         System.out.println("    Numbers: " + Arrays.toString(numbers));
         System.out.println("    Odd Count: " + oddCount);

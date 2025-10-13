@@ -1,4 +1,4 @@
-package Java_tests;
+package Java_questions;
 
 import java.util.Random;
 
@@ -8,41 +8,36 @@ public class question2 {
     public static void main(String[] args) {
         // Goal: Check if a password is valid. A valid password must:
         //   1. Contain at least one uppercase letter
-        //   2. Contain at least one lowercase letter
-        //   3. Contain at least one number
-        //   4. Be at least 8 characters long
+        //   2. Contain at least one number
+        //   3. Be at least 8 characters long
         //
         // Steps:
         //   1. Check each character in the password to see if ANY character is
         //      uppercase. If true, set `hasUppercase` to true.
         //   2. Check each character in the password to see if ANY character is
-        //      lowercase. If true, set `hasLowercase` to true.
-        //   3. Check each character in the password to see if ANY character is
         //      a number. If true, set `hasNumber` to true.
-        //   4. Check if the password is at least 8 characters long. If true,
+        //   3. Check if the password is at least 8 characters long. If true,
         //      set `isLongEnough` to true.
 
         boolean hasUppercase = false;
-        boolean hasLowercase = false;
         boolean hasNumber = false;
         boolean isLongEnough = false;
 
         String password = passwordGenerator(1, 7, 1);
 
-        // Your code here ----
+        // Your code here ↓↓↓↓
 
 
 
 
+        // ↑↑↑↑ Your code goes above
 
-        boolean isValid = hasLowercase && hasUppercase && hasNumber && isLongEnough;
+        boolean isValid = hasUppercase && hasNumber && isLongEnough;
         System.out.println("Question 2 - Password Validator");
         System.out.println("    Generated Password: " + password);
         System.out.println("        Has Uppercase:  " + hasUppercase);
-        System.out.println("        Has Lowercase:  " + hasLowercase);
         System.out.println("        Has Number:     " + hasNumber);
         System.out.println("        Is Long Enough: " + isLongEnough);
-        System.out.println();
         System.out.println("        Is Valid:       " + isValid);
     }
 
