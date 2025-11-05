@@ -34,8 +34,8 @@ public class question6 {
 
         System.out.println("Question 6 - Shopping Cart Calculator");
         System.out.println("    Subtotal: $" + String.format("%.2f", subtotal));
-        System.out.println("    Tax (8.5%): $" + String.format("%.2f", tax));
-        System.out.println("    Total: $" + String.format("%.2f", total));
+        System.out.println("    Tax:      $" + String.format("%.2f", tax));
+        System.out.println("    Total:    $" + String.format("%.2f", total));
     }
 
     private static double randomPrice(double min, double max) {
