@@ -26,7 +26,7 @@ public class question7 {
                 highestGrade = student.getGrade();
             }
         }
-        
+
         for (Student student : students) {
             if (student.getGrade() == highestGrade) {
                 topStudents.add(student);
@@ -63,20 +63,20 @@ public class question7 {
 class Student {
     private String name;
     private double grade;
-    
+
     public Student(String name, double grade) {
         this.name = name;
         this.grade = grade;
     }
-    
+
     public String getName() {
         return name;
     }
-    
+
     public double getGrade() {
         return grade;
     }
-    
+
     @Override
     public String toString() {
         return name + " (Grade: " + grade + ")";

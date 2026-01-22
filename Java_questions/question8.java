@@ -13,12 +13,14 @@ public class question8 {
         //   1. The list of books is already given to you, along with methods in the Book 
         //      class to get the title, author, and year.
         //   2. Implement search methods for searching by title, author, and year range.
+        //      - Right now, these methods return ALL books. You need to modify them to return
+        //       only the books that match the search criteria.
         //      - You may want to loop through each book in the list and add it to a results
         //        list if it matches the criteria.
         //   3. The results should be returned as a list of Book objects.
 
         List<Book> library = generateBooks();
-        
+
         System.out.println("Question 8 - Library Search System");
         System.out.println("Library contents:");
         for (Book book : library) {
@@ -32,7 +34,7 @@ public class question8 {
         int endYear = 1980;
 
         System.out.println("\nSearch Results:");
-        
+
         // Search by exact title
         List<Book> titleResults = searchByTitle(library, searchTitle);
         System.out.println("Books with exact title '" + searchTitle + "':");
@@ -91,7 +93,7 @@ public class question8 {
 
     private static List<Book> generateBooks() {
         List<Book> books = new ArrayList<>();
-        
+
         // Pre-defined books for consistent testing
         books.add(new Book("1984", "George Orwell", 1949));
         books.add(new Book("The Shining", "Stephen King", 1977));
@@ -101,7 +103,7 @@ public class question8 {
         books.add(new Book("The Great Gatsby", "F. Scott Fitzgerald", 1925));
         books.add(new Book("Dune", "Frank Herbert", 1965));
         books.add(new Book("Lucky Jim", "Kingsley Amis", 1954));
-        
+
         return books;
     }
 
@@ -114,25 +116,25 @@ class Book {
     private String title;
     private String author;
     private int year;
-    
+
     public Book(String title, String author, int year) {
         this.title = title;
         this.author = author;
         this.year = year;
     }
-    
+
     public String getTitle() {
         return title;
     }
-    
+
     public String getAuthor() {
         return author;
     }
-    
+
     public int getYear() {
         return year;
     }
-    
+
     @Override
     public String toString() {
         return "\"" + title + "\" by " + author + " (" + year + ")";

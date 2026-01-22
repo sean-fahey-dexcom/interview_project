@@ -6,7 +6,7 @@ public class question4 {
         // Goal: Given a random string, determine if it is a palindrome. A 
         // palindrome is a word that reads the same backward as forward like
         // "racecar" or "level".
-        
+
         // Steps:
         //  1. Loop through the string and compare the first character to the
         //     last character.

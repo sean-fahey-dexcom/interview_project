@@ -21,7 +21,7 @@ public class question6 {
 
         // Tax rate (8.5%)
         float taxRate = 0.085f;
-        
+
         // Variables to calculate (initialize these)
         double subtotal = 0.0;
         double tax = 0.0;
