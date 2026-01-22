@@ -28,7 +28,7 @@ public class question1 {
         System.out.println("    Numbers: " + Arrays.toString(numbers));
         System.out.println("    Odd Count: " + oddCount);
     }
-    
+
 
     private static Boolean isOdd(int number) {
         // Helper method that checks if a number is odd

@@ -9,18 +9,18 @@ public class question5 {
         // Goal: You are given a random string of length 10 containing ONLY the
         // letters a, b, c, d, and e. Find which letter appears the most AND
         // how many times it appears.
-        
+
         // Steps:
         //   1. Loop through the string and count how many times each letter
         //      appears.
         //   2. Save the letter that appears to the variable mostFrequentChar.
         //   3. Save the number of times it appears to the variable maxFrequency.
-        
+
         // Note: For this question, I have given you the starting code. Add to
         // the code below to complete the problem.
 
         String randomString = randomString(10);
-        
+
         char mostFrequentChar = ' ';
         int maxFrequency = 0;
 

@@ -5,7 +5,7 @@ def question1():
     """"
     Goal: Count how many ODD numbers are in a randomly generated array
     of integers.
-    
+
     Steps:
         1. Loop through the array and check each number one at a time.
         2. If the number is odd, add 1 to the odd_count variable.
