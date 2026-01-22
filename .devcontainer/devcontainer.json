@@ -43,7 +43,9 @@
 			"settings": {
 				"liveshare.guestApprovalRequired": false,
 				"liveshare.access": "write",
-				"liveshare.guestConsoleAccess": "run"
+				"liveshare.guestConsoleAccess": "run",
+				"liveshare.enableGuestDebugControl": true,
+				"liveshare.allowGuestCommandControl": true
 			}
 		}
 	}
