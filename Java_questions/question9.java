@@ -15,7 +15,7 @@ public class question9 {
 
     static class Counter{
         // This is a counter class to keep track of the number of heads and tails we've seen recently.
-        // It has methods to add heads or tails, reset the counts, and check if we've reached 10 in a row.
+        // It has methods to add heads or tails, reset the counts, and check if we've reached 5 in a row.
         // You will need to implement some of the methods in this class to make it work.
 
         private int totalHeads = 0;
@@ -55,7 +55,7 @@ public class question9 {
     }
 
     public static void main(String[] args) {
-        // Goal: Flip a coin until you get 10 heads or 10 tails in a row. Then save the total number of flips that it took to reach that point.
+        // Goal: Flip a coin until you get 5 heads or 5 tails in a row. Then save the total number of flips that it took to reach that point.
 
         // Steps:
         //   1. Create a new instance of the Counter class. This is what we'll use to keep track of our results.
@@ -64,9 +64,9 @@ public class question9 {
         //      - reset_tails()
         //      - hasReachedLimit()
         //      - getTotalFlips()
-        //   2. Write a loop that calls the coin() method and updates the counter with each result.
-        //   3. Exit the loop when Counter.hasReachedLimit() returns true.
-        //   3. Store the result of Counter.getTotalFlips() in totalFlips.
+        //   3. Write a loop that calls the coin() method and updates the counter with each result.
+        //   4. Exit the loop when Counter.hasReachedLimit() returns true.
+        //   5. Store the result of Counter.getTotalFlips() in totalFlips.
 
         int totalFlips = 0;
     
@@ -79,6 +79,6 @@ public class question9 {
 
         System.out.println("\n");
         System.out.println("Question 9 - Coin Flip Simulation");
-        System.out.println("Total flips to get 10 in a row: " + totalFlips);
+        System.out.println("Total flips to get 5 in a row: " + totalFlips);
     }
 }
