@@ -3,19 +3,16 @@ package Java_questions;
 public class question9 {
     public static class NotImplementedException extends RuntimeException {
         // This is a custom exception I use to indicate something hasn't been implemented yet.
-        public NotImplementedException() {
-            super("This functionality has not been implemented yet.");
-        }
+        public NotImplementedException() {super("This section has not been implemented yet :(");}
     }
 
     public static String coin() {
-        // Simulate a coin flip (returns "H" for heads and "T" for tails)
+        // Method to simulate a coin flip (returns "H" for heads and "T" for tails)
         String result = Math.random() < 0.5 ? "H" : "T";
         System.out.printf(result + " ");
         return result;
     }
 
-    // Counter class that keeps track of consecutive heads and tails
     static class Counter{
         // This is a counter class to keep track of the number of heads and tails we've seen recently.
         // It has methods to add heads or tails, reset the counts, and check if we've reached 10 in a row.
@@ -62,6 +59,11 @@ public class question9 {
 
         // Steps:
         //   1. Create a new instance of the Counter class. This is what we'll use to keep track of our results.
+        //   2. Finish the incomplete methods in the Counter class:
+        //      - reset_heads()
+        //      - reset_tails()
+        //      - hasReachedLimit()
+        //      - getTotalFlips()
         //   2. Write a loop that calls the coin() method and updates the counter with each result.
         //   3. Exit the loop when Counter.hasReachedLimit() returns true.
         //   3. Store the result of Counter.getTotalFlips() in totalFlips.
