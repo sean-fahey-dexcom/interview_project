@@ -41,7 +41,13 @@ order to see the test questions.
 
 ### Questions
 
-The questions (up through #5) are the same in the Python and Java directories. I stopped adding the python questions a while ago because we never really use them.
+The questions (up through #5) are the same in the Python and Java directories.
+I stopped adding the python questions a while ago because we never really use
+them.
+
+Level 3 (Sr. Software Test Engineer) candidates should be able to start with a
+hard question. Lower levels vary based on their Java experience and how
+important Java skills are to make them a good candidate.
 
 | # | Name | Difficulty | Goal | Reasoning |
 | --- | --- | --- | --- | ---- |
@@ -51,8 +57,8 @@ The questions (up through #5) are the same in the Python and Java directories. I
 | 4 | Palindrome Check | `Easy` | Given a string, determine if it is a palindrome. A palindrome is a word, phrase, number, or other sequence of characters that reads the same forward and backward. | Double loop tends to be easiest, but some candidates are thrown off track. |
 | 5 | Most Frequent Letter | `Medium` | Given a string, identify the most frequent letter and the number of times it occurs. | Requires knowing Map methods, but is very easy if they know them. |
 | 6 | Shopping Cart | `Medium` | Implement a simple shopping cart system where you can add items with their prices, remove items, and calculate the total cost. | Very basic OOP concepts and math operations. |
-| 7 | Highest Grade | `Hard` | Given a list of student names and their corresponding grades, determine which student has the highest grade. | Simple logic, two loop approach is easy, single loop approach requires some logic. |
-| 8 | Library Search System | `Hard` | Implement a simple library search system where you can search for books by title, author, or ISBN. The system should return the details of the book if found, or indicate that the book is not in the library. | Basic understanding of data structures. The wording tends to confuse candidates more than the logic. |
+| 7 | Highest Grade | `Hard` | Given a list of student names and their corresponding grades, determine which student has the highest grade. | Two loop approach is easy, single loop approach requires some creativity. |
+| 8 | Library Search System | `Hard` | Implement a simple library search system where you can search for books by title, author, or ISBN. The system should return the details of the book if found, or indicate that the book is not in the library. | Basic understanding of data structures. The wording tends to confuse candidates more than the logic. Also the question is a bit long :(. |
 | 9 | Coin Flip Counter | `Hard` | Simulate flipping a coin 100 times and count how many times it lands on heads and how many times it lands on tails. | Requires completing a helper class and creating a new instance of the class. OOP plus a while loop. |
 
 ```email
