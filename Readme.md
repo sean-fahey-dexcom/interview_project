@@ -59,7 +59,7 @@ important Java skills are to make them a good candidate.
 | 6 | Shopping Cart | `Medium` | Implement a simple shopping cart system where you can add items with their prices, remove items, and calculate the total cost. | Very basic OOP concepts and math operations. |
 | 7 | Highest Grade | `Hard` | Given a list of student names and their corresponding grades, determine which student has the highest grade. | Two loop approach is easy, single loop approach requires some creativity. |
 | 8 | Library Search System | `Hard` | Implement a simple library search system where you can search for books by title, author, or ISBN. The system should return the details of the book if found, or indicate that the book is not in the library. | Basic understanding of data structures. The wording tends to confuse candidates more than the logic. Also the question is a bit long :(. |
-| 9 | Coin Flip Counter | `Hard` | Simulate flipping a coin 100 times and count how many times it lands on heads and how many times it lands on tails. | Requires completing a helper class and creating a new instance of the class. OOP plus a while loop. |
+| 9 | Coin Flip Counter | `Hard` | Simulate flipping a coin until it shows 10 heads or 10 tails in a row. | Requires completing a helper class and creating a new instance of the class. OOP plus a while loop. |
 
 ```email
 Author: Sean Fahey
