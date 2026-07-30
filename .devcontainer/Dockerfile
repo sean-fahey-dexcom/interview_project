@@ -2,6 +2,8 @@ FROM ubuntu:24.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV PIP_NO_CACHE_DIR=1
+ENV VIRTUAL_ENV=/opt/venv
+ENV PATH="/opt/venv/bin:${PATH}"
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -15,9 +17,8 @@ RUN apt-get update \
         tesseract-ocr-eng \
     && rm -rf /var/lib/apt/lists/*
 
-RUN ln -sf /usr/bin/python3 /usr/local/bin/python
-
 COPY requirements.txt /tmp/requirements.txt
-RUN python -m pip install --upgrade pip \
-    && python -m pip install -r /tmp/requirements.txt \
+RUN python3 -m venv ${VIRTUAL_ENV} \
+    && ${VIRTUAL_ENV}/bin/python -m pip install --upgrade pip \
+    && ${VIRTUAL_ENV}/bin/pip install -r /tmp/requirements.txt \
     && rm -f /tmp/requirements.txt

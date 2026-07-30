@@ -20,7 +20,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "python -m venv .venv && . .venv/bin/activate && pip install -U pip",
+	"postCreateCommand": "python --version && pip --version && tesseract --version",
 
 	// Customize container specific settings.json values on container create.
 	"customizations": {
