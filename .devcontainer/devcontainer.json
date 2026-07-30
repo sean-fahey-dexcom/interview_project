@@ -1,24 +1,26 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/java
 {
-	"name": "Java",
+	"name": "Python",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/java:1-21-bullseye",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": ".."
+	},
 
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
 			"version": "none",
 			"installMaven": "false",
 			"installGradle": "true"
-		},
-		"ghcr.io/devcontainers/features/python:1": {}
+		}
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "python -m venv .venv && source .venv/bin/activate && pip install -U pip && pip install uv && uv pip install -r requirements.txt",
+	"postCreateCommand": "python -m venv .venv && . .venv/bin/activate && pip install -U pip",
 
 	// Customize container specific settings.json values on container create.
 	"customizations": {
