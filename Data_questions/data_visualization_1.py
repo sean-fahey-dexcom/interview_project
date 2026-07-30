@@ -12,7 +12,6 @@ import plotly.express as px
 
 
 def load_data(file_path='Data_questions/data/Smartphone_Usage_Productivity_Dataset_50000.csv'):
-    # Read just the first 500 rows into a dataframe
     data = pd.read_csv(file_path, sep=',', encoding='utf-8', header=0)
     return data
 
