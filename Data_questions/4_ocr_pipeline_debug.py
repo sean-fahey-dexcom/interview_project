@@ -2,7 +2,7 @@
 Goal: This is a small OCR pipeline made up of a handful of classes. It should
 read a sample image (a plain paragraph of printed text) and write clean,
 readable OCR text out to a file, but right now it has 3 independent bugs in
-it. Find and fix both.
+it. Find and fix all three.
 
 IMPORTANT: Save the output text to Data_questions/ocr_results. Don't save it to the
 default output directory.
