@@ -19,6 +19,8 @@ RUN apt-get update \
 
 COPY requirements.txt /tmp/requirements.txt
 RUN python3 -m venv ${VIRTUAL_ENV} \
-    && ${VIRTUAL_ENV}/bin/python -m pip install --upgrade pip \
-    && ${VIRTUAL_ENV}/bin/pip install -r /tmp/requirements.txt \
-    && rm -f /tmp/requirements.txt
+    && ${VIRTUAL_ENV}/bin/python -m pip install --upgrade pip setuptools wheel \
+    && grep -Evi '^(pip|setuptools|wheel)([[:space:]]|==|>=|<=|~=|!=|>|<|$)' /tmp/requirements.txt > /tmp/requirements.runtime.txt \
+    && ${VIRTUAL_ENV}/bin/pip install -r /tmp/requirements.runtime.txt \
+    && ${VIRTUAL_ENV}/bin/python -m pip install --upgrade pip setuptools wheel \
+    && rm -f /tmp/requirements.txt /tmp/requirements.runtime.txt
