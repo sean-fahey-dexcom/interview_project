@@ -7,12 +7,6 @@ it. Find and fix all three.
 IMPORTANT: Save the output text to Data_questions/ocr_results. Don't save it to the
 default output directory.
 
-You'll know you're done when:
-    1. The output file shows up in the directory you pass to
-       OCRPipeline(...), not somewhere else.
-    2. The OCR result matches the paragraph in the image, with no missing
-       or garbled text.
-
 Steps:
     1. Run the script and read the printed output plus whatever ends up in
        the output directory.
