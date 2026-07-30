@@ -1,8 +1,11 @@
 """
 Goal: This is a small OCR pipeline made up of a handful of classes. It should
 read a sample image (a plain paragraph of printed text) and write clean,
-readable OCR text out to a file, but right now it has 2 independent bugs in
-it. Find and fix both.
+readable OCR text out to a file, but right now it has 3 independent bugs in
+it. Find and fix all three.
+
+IMPORTANT: Save the output text to Data_questions/ocr_results. Don't save it to the
+default output directory.
 
 You'll know you're done when:
     1. The output file shows up in the directory you pass to
@@ -20,6 +23,9 @@ Steps:
 import os
 import pytesseract
 from PIL import Image
+
+
+DEFAULT_OUTPUT_DIR = '.'
 
 
 class ImagePreprocessor:
@@ -41,9 +47,9 @@ class OCREngine:
 
 
 class ResultWriter:
-    """Writes OCR output to a text file inside output_dir."""
+    """Writes a single OCR output to a text file inside output_dir."""
 
-    def __init__(self, output_dir='Data_questions/ocr_output'):
+    def __init__(self, output_dir=DEFAULT_OUTPUT_DIR):
         self.output_dir = output_dir
         os.makedirs(self.output_dir, exist_ok=True)
 
@@ -55,13 +61,13 @@ class ResultWriter:
 
 
 class TimestampedResultWriter(ResultWriter):
-    """A ResultWriter that also prints a running count after each write."""
+    """A ResultWriter class that also prints a running count after each write."""
 
-    def __init__(self, output_dir):
+    def __init__(self, output_dir=DEFAULT_OUTPUT_DIR):
         # BUG: output_dir and write_count are set before calling
         # super().__init__(), and the parent's __init__() then runs with
         # its own default argument, resetting self.output_dir back to
-        # 'Data_questions/ocr_output' regardless of what was passed in here.
+        # DEFAULT_OUTPUT_DIR regardless of what was passed in here.
         self.output_dir = output_dir
         self.write_count = 0
         super().__init__()
@@ -76,7 +82,7 @@ class TimestampedResultWriter(ResultWriter):
 class OCRPipeline:
     """Loads an image, preprocesses it, runs OCR, and writes the result."""
 
-    def __init__(self, output_dir='Data_questions/ocr_output'):
+    def __init__(self, output_dir=DEFAULT_OUTPUT_DIR):
         self.preprocessor = ImagePreprocessor()
         self.ocr_engine = OCREngine()
         self.writer = TimestampedResultWriter(output_dir)
@@ -93,8 +99,8 @@ if __name__ == '__main__':
     pipeline = OCRPipeline(output_dir='Data_questions/ocr_results')
 
     print("Dense paragraph result:")
-    dense_text = pipeline.run(
+    text = pipeline.run(
         'Data_questions/images/dense_paragraph.png',
         'dense_paragraph.txt',
     )
-    print(dense_text)
+    print(text)
