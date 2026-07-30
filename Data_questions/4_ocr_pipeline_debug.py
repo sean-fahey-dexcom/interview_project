@@ -75,9 +75,9 @@ class OCRPipeline:
 
     def run(self, image_path, output_filename):
         image = Image.open(image_path)
-        processed = self.preprocessor.preprocess(image)
-        text = self.ocr_engine.extract_text(processed)
-        self.writer.write(output_filename, text)
+        processed = preprocessor.preprocess(image)
+        text = ocr_engine.extract_text(processed)
+        writer.write(output_filename, text)
         return text
 
 
